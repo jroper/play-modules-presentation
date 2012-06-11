@@ -11,6 +11,12 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD, ElementType.TYPE})
 public @interface JavaRickRoll {
+
+    /**
+     * The name of the header to add to use to rick roll people
+     *
+     * @return The header name, defaults to X-Rick-Roll
+     */
     String headerName() default DEFAULT;
 
     public static final String DEFAULT = "_None";
